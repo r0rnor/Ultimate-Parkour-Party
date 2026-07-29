@@ -1,0 +1,113 @@
+{
+	"name": "typescript",
+	"version": "1.0.0",
+	"description": "Roblox TypeScript JECS project template",
+	"keywords": [
+		"roblox",
+		"jecs",
+		"typescript"
+	],
+	"license": "ISC",
+	"author": "blackbojji",
+	"type": "module",
+	"main": "index.js",
+	"lint-staged": {
+		"!(OLD_OOP_SRC)/**/*.{ts,tsx,js,jsx}": "eslint --fix"
+	},
+	"scripts": {
+		"build": "rbxts-build build",
+		"compile": "rbxts-build compile",
+		"open": "rbxts-build open",
+		"restart": "pnpm run dev:stop && pnpm run dev:start",
+		"start": "rbxts-build start",
+		"stop": "rbxts-build stop",
+		"sync": "rbxts-build sync",
+		"watch": "rbxts-build watch",
+		"lint": "eslint --cache",
+		"lint:fix": "eslint --cache --fix",
+		"locales:check": "node scripts/check-locale-parity.mjs",
+		"spellcheck": "cspell src/**",
+		"prepare": "husky",
+		"postinstall": "node scripts/ensure-react-lua.mjs"
+	},
+	"dependencies": {
+		"@flamework/core": "catalog:prod",
+		"@flamework/networking": "catalog:prod",
+		"@rbxts/conch": "catalog:prod",
+		"@rbxts/conch-language": "^0.3.1",
+		"@rbxts/conch-ui": "catalog:prod",
+		"@rbxts/document-service": "1.2.2-ts.1",
+		"@rbxts/jabby": "catalog:prod",
+		"@rbxts/jecs": "catalog:prod",
+		"@rbxts/jecs-spring": "^1.0.2",
+		"@rbxts/jecs-utils": "catalog:prod",
+		"@rbxts/localize": "^1.0.1",
+		"@rbxts/log": "catalog:prod",
+		"@rbxts/message-templates": "^0.3.2",
+		"@rbxts/object-cache": "^1.4.5",
+		"@rbxts/object-utils": "catalog:prod",
+		"@rbxts/pebble": "catalog:prod",
+		"@rbxts/planck": "catalog:prod",
+		"@rbxts/planck-jabby": "catalog:prod",
+		"@rbxts/planck-runservice": "catalog:prod",
+		"@rbxts/pretty-react-hooks": "^0.6.4",
+		"@rbxts/react": "^17.2.3",
+		"@rbxts/react-ripple": "^2.1.0",
+		"@rbxts/react-roblox": "^17.2.3",
+		"@rbxts/react-vendor": "17.2.3",
+		"@rbxts/replecs": "catalog:prod",
+		"@rbxts/ripple": "^0.9.3",
+		"@rbxts/services": "catalog:prod",
+		"@rbxts/signal": "catalog:prod",
+		"@rbxts/squash": "3.0.0-ts.0",
+		"@rbxts/state-management": "^0.2.11",
+		"@rbxts/t": "^3.2.1",
+		"@rbxts/vide": "catalog:prod",
+		"@rbxts/yetanothernet": "0.10.0-alpha.5"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^20.1.0",
+		"@commitlint/config-conventional": "^20.0.0",
+		"@cspell/eslint-plugin": "^9.3.2",
+		"@isentinel/eslint-config": "catalog:lint",
+		"@isentinel/tsconfig": "catalog:types",
+		"@rbxts/compiler-types": "catalog:types",
+		"@rbxts/types": "catalog:types",
+		"@typescript-eslint/eslint-plugin": "^7.18.0",
+		"@typescript-eslint/parser": "^7.18.0",
+		"cspell": "^9.3.2",
+		"eslint": "catalog:lint",
+		"eslint-config-prettier": "^9.1.2",
+		"eslint-plugin-prettier": "^5.5.4",
+		"eslint-plugin-roblox-ts": "^0.0.36",
+		"husky": "^9.1.7",
+		"jiti": "^2.6.1",
+		"lint-staged": "^16.2.7",
+		"prettier": "^3.6.2",
+		"prettier-eslint": "^16.4.2",
+		"rbxts-build": "catalog:scripts",
+		"rbxts-transform-debug": "catalog:build",
+		"rbxts-transform-env": "catalog:build",
+		"rbxts-transformer-flamework": "catalog:build",
+		"rbxts-transformer-jecs": "^0.0.10",
+		"roblox-ts": "catalog:build",
+		"ts-plugin-sort-import-suggestions": "catalog:types",
+		"typescript": "catalog:types",
+		"typescript-eslint": "^7.18.0"
+	},
+	"packageManager": "pnpm@9.15.9",
+	"rbxts-build": {
+		"syncLocation": "src/types/services.d.ts",
+		"names": {
+			"build": "build",
+			"compile": "compile",
+			"open": "open",
+			"watch": "watch"
+		}
+	},
+	"pnpm": {
+		"patchedDependencies": {
+			"@rbxts/vide": "patches/@rbxts__vide.patch"
+		}
+	}
+}

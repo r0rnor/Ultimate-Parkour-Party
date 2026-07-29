@@ -1,0 +1,32 @@
+{
+	"extends": "@isentinel/tsconfig/roblox",
+	"compilerOptions": {
+		"jsx": "react",
+		"jsxFactory": "React.createElement",
+		"jsxFragmentFactory": "React.Fragment",
+		"typeRoots": ["node_modules/@rbxts", "node_modules/@flamework"],
+		"plugins": [
+			{
+				"transform": "rbxts-transformer-flamework",
+				"obfuscation": false
+			},
+			{
+				"transform": "rbxts-transform-debug"
+			},
+			{
+				"transform": "rbxts-transform-env",
+				"shortCircuitNodeEnv": false,
+				"defaultEnvironment": "development"
+			},
+			{
+				"name": "ts-plugin-sort-import-suggestions",
+				"moveDownPatterns": ["@rbxts"]
+			},
+			{
+				"name": "rbxts-transformer-jecson"
+			}
+		]
+	},
+	"exclude": [],
+	"include": ["**/*.ts"]
+}

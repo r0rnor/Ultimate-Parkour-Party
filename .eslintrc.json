@@ -1,0 +1,30 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+	  "jsx": true,
+	  "useJSXTextNode": true,
+	  "ecmaVersion": 2018,
+	  "sourceType": "module",
+	  "project": "./tsconfig.json"
+	},
+	"ignorePatterns": ["/out", "/types", "commitlint.config.ts", "src/shared/info/assets.d.ts", ".github/instructions", "sourcemap.json", "ui_template", "OLD_OOP_SRC/**"],
+	"plugins": ["@typescript-eslint", "roblox-ts", "prettier", "@cspell"],
+	"extends": [
+	  "eslint:recommended",
+	  "plugin:@typescript-eslint/recommended-type-checked",
+	  "plugin:@typescript-eslint/stylistic-type-checked",
+	  "plugin:prettier/recommended",
+	  "plugin:roblox-ts/recommended"
+	],
+	"rules": {
+	  "prettier/prettier": [
+		"warn",
+		{
+			"singleAttributePerLine": true
+		}
+	  ],
+	  "@cspell/spellchecker": "warn",
+	  "@typescript-eslint/array-type": ["error", { "default": "generic" }],
+	  "roblox-ts/no-private-identifier": "off"
+	}
+  }

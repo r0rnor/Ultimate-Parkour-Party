@@ -1,0 +1,40 @@
+
+version: "0.2"
+language: "en,ru"
+dictionaries: 
+  - roblox
+  - my-code
+  - roblox-packages
+  - tooling
+  - games
+  - other
+ignorePaths:
+  - package.json
+  - out
+  - node_modules
+  - .vscode
+  - lune
+  - MyTemplate/configs
+  - Logs
+  - .github
+  - .github/instructions
+  - sourcemap.json
+dictionaryDefinitions:
+  - name: "roblox"
+    path: "./dictionaries/roblox.txt"
+    addWords: true
+  - name: "my-code"
+    path: "./dictionaries/my-code.txt"
+    addWords: true
+  - name: "roblox-packages"
+    path: "./dictionaries/roblox-packages.txt"
+    addWords: true
+  - name: "tooling"
+    path: "./dictionaries/tooling.txt"
+    addWords: true
+  - name: "games"
+    path: "./dictionaries/games.txt"
+    addWords: true
+  - name: "other"
+    path: "./dictionaries/other.txt"
+    addWords: true

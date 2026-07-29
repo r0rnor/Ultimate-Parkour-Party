@@ -1,0 +1,70 @@
+packages:
+  - "src/*"
+
+catalogMode: strict
+
+catalogs:
+  build:
+    rbxts-transform-debug: 2.2.0
+    rbxts-transform-env: 3.0.0
+    rbxts-transformer-flamework: 1.3.2
+    rbxts-transformer-jecs: 0.0.6
+    roblox-ts: 3.0.0
+  lint:
+    "@eslint/config-inspector": 1.2.0
+    "@eslint-react/eslint-plugin": 1.53.1
+    "@isentinel/eslint-config": 3.1.0
+    eslint: ^8.57.1
+    eslint-plugin-pnpm: 1.1.1
+    eslint-plugin-react-roblox-hooks: 5.1.0-rbx.1
+    jiti: 2.6.1
+    lint-staged: 16.1.6
+  prod:
+    "@flamework/core": ^1.3.2
+    "@flamework/networking": ^1.3.2
+    "@rbxts/jabby": ^0.4.1
+    "@rbxts/pebble": ^0.1.2
+    "@rbxts/jecs": ^0.9.0
+    "@rbxts/jecs-utils": ^1.4.0
+    "@rbxts/log": ^0.6.3
+    "@rbxts/message-templates": ^0.3.2
+    "@rbxts/planck": ^1.0.0
+    "@rbxts/planck-jabby": ^1.0.0
+    "@rbxts/planck-runservice": ^1.0.3
+    "@rbxts/replecs": 0.3.0-ts.1
+    "@rbxts/services": ^1.5.5
+    "@rbxts/signal": ^1.1.1
+    "@rbxts/vide": ^0.5.7
+    "@rbxts/yetanothernet": 0.10.0-alpha.5
+    "@rbxts/conch": 0.3.1
+    "@rbxts/conch-ui": 0.3.1
+    "@rbxts/object-utils": ^1.0.4
+  scripts:
+    rbxts-build: 2.4.3
+
+  types:
+    "@isentinel/tsconfig": 1.0.0
+    "@rbxts/compiler-types": 3.0.0-types.0
+    "@rbxts/types": 1.0.881
+    ts-plugin-sort-import-suggestions: 1.0.4
+    typescript: 5.5.3
+configDependencies:
+  "@pnpm/trusted-deps": 0.1.0+sha512-IERT0uXPBnSZGsCmoSuPzYNWhXWWnKkuc9q78KzLdmDWJhnrmvc7N4qaHJmaNKIusdCH2riO3iE34Osohj6n8w==
+
+enablePrePostScripts: true
+
+ignoreWorkspaceRootCheck: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - oxc-resolver
+  - unrs-resolver
+
+onlyBuiltDependenciesFile: node_modules/.pnpm-config/@pnpm/trusted-deps/allow.json
+
+publicHoistPattern:
+  - "*@rbxts*"
+
+saveExact: true
+
+shellEmulator: true

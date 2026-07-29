@@ -1,0 +1,84 @@
+{
+	"name": "roblox-ts-game",
+	"globIgnorePaths": ["**/package.json", "**/tsconfig.json"],
+	"tree": {
+		"$className": "DataModel",
+		"HttpService": {
+			"$className": "HttpService",
+			"$properties": {
+				"HttpEnabled": true
+			}
+		},
+		"Lighting": {
+			"$className": "Lighting",
+			"$properties": {
+				"Ambient": [0.7058823529411765, 0.7058823529411765, 0.7450980392156863],
+				"Brightness": 1.2,
+				"ClockTime": 10,
+				"ColorShift_Bottom": [0, 0, 0],
+				"ColorShift_Top": [0, 0, 0],
+				"EnvironmentDiffuseScale": 0.7,
+				"EnvironmentSpecularScale": 0.8,
+				"ExposureCompensation": 0,
+				"GeographicLatitude": 41.733,
+				"GlobalShadows": true,
+				"LightingStyle": { "Enum": 0 },
+				"OutdoorAmbient": [0.6274509803921569, 0.6274509803921569, 0.6666666666666666],
+				"PrioritizeLightingQuality": false,
+				"ShadowSoftness": 0.5,
+				"TimeOfDay": "10:00:00"
+			}
+		},
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"TS": {
+				"$path": "out/shared"
+			},
+			"rbxts_include": {
+				"$path": "include",
+				"node_modules": {
+					"$className": "Folder",
+					"@flamework": {
+						"$path": "node_modules/@flamework"
+					},
+					"@rbxts": {
+						"$path": "node_modules/@rbxts"
+					}
+				}
+			}
+		},
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"TS": {
+				"$path": "out/server"
+			}
+		},
+		"SoundService": {
+			"$className": "SoundService",
+			"$properties": {
+				"RespectFilteringEnabled": true
+			}
+		},
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"TS": {
+					"$path": "out/client"
+				}
+			}
+		},
+		"Workspace": {
+			"$className": "Workspace",
+			"$properties": {
+				"FilteringEnabled": true
+			}
+		},
+		"TextChatService": {
+			"$className": "TextChatService",
+			"$properties": {
+				"ChatVersion": "TextChatService"
+			}
+		}
+	}
+}

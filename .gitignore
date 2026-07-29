@@ -1,0 +1,35 @@
+# Node / package artifacts
+node_modules/
+*.tgz
+
+# Build outputs
+out/
+dist/
+sourcemap.json
+
+# Roblox-TS include/runtime
+include/
+
+# Logs, editor, OS
+.DS_Store
+.idea/
+
+# Roblox
+*.rbxlx.lock
+*.rbxlx
+*.rbxl
+*.rbxl.lock
+
+# Optional local env files
+.env
+.env.*
+node_modules/
+out/
+result/
+.direnv/
+.devenv/
+.DS_Store
+flamework.build
+/include
+.eslintcache
+game.rbxl
