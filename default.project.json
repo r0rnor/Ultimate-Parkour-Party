@@ -70,6 +70,12 @@
         },
         "features": {
           "$className": "Folder",
+          "objects": {
+            "$className": "Folder",
+            "spikeSystems": {
+              "$path": "out/features/objects/spikeSystems-server.luau"
+            }
+          },
           "player": {
             "$className": "Folder",
             "playerSystems": {
