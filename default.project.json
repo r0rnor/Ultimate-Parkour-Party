@@ -18,6 +18,24 @@
       },
       "shared": {
         "$className": "Folder",
+        "app": {
+          "$className": "Folder",
+          "ecs": {
+            "$className": "Folder",
+            "scheduler": {
+              "$path": "out/app/ecs/shared/scheduler.luau"
+            },
+            "world": {
+              "$path": "out/app/ecs/shared/world.luau"
+            }
+          }
+        },
+        "core": {
+          "$className": "Folder",
+          "components": {
+            "$path": "out/core/components/shared"
+          }
+        },
         "features": {
           "$className": "Folder",
           "showcase": {
@@ -26,14 +44,38 @@
               "$path": "out/features/showcase/shared/showcase.luau"
             }
           }
+        },
+        "infrastructure": {
+          "$className": "Folder",
+          "network": {
+            "$className": "Folder",
+            "network": {
+              "$path": "out/infrastructure/network/shared/network.luau"
+            }
+          }
         }
       }
     },
     "ServerScriptService": {
       "server": {
         "$className": "Folder",
+        "app": {
+          "$className": "Folder",
+          "bootstrap": {
+            "$className": "Folder",
+            "main": {
+              "$path": "out/app/bootstrap/main.server.luau"
+            }
+          }
+        },
         "features": {
           "$className": "Folder",
+          "player": {
+            "$className": "Folder",
+            "playerSystems": {
+              "$path": "out/features/player/playerSystems-server.luau"
+            }
+          },
           "showcase": {
             "$className": "Folder",
             "showcase": {
@@ -47,6 +89,15 @@
       "StarterPlayerScripts": {
         "client": {
           "$className": "Folder",
+          "app": {
+            "$className": "Folder",
+            "bootstrap": {
+              "$className": "Folder",
+              "main": {
+                "$path": "out/app/bootstrap/main.client.luau"
+              }
+            }
+          },
           "features": {
             "$className": "Folder",
             "showcase": {
